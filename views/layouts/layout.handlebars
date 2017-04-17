@@ -5,6 +5,9 @@
     <title>Login app</title>
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/jquery-calendar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/jquery-calendar.js"></script>
 </head>
 <body>
 <div class="container">
@@ -51,6 +54,10 @@
       </footer>
 
     </div> <!-- /container -->
-
+<script>
+$(function() {
+  $("#calendar").calendar();
+});
+</script>
 </body>
 </html>
