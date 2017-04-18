@@ -7,7 +7,7 @@
     this.dayList = $(this).find(".calendar-list");
     this.nav = $(this).find(".calendar-nav");
     this.title = $(this).find(".calendar-title");
-    this.days = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"];
+    this.days = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"];
     this.getDayStr = function(day) {
       if (day === 0) {
         day = 7;
@@ -72,7 +72,7 @@
       selectedMonth = $("<h2></h2>");
       $(this.nav).append(selectedMonth);
       selectedMonth.append("<span class=\"prevMonth\"><a href=\"javascript:void(0);\">&lt;</a></span>");
-      selectedMonth.append("<label>" + this.initDate.getFullYear() + "年 " + (this.initDate.getMonth() + 1) + "月</label>");
+      selectedMonth.append( this.initDate.getFullYear() + "/ " + (this.initDate.getMonth() + 1));
       selectedMonth.append("<span class=\"nextMonth\"><a href=\"javascript:void(0);\">&gt;</a></span>");
       selectedDate = $("<div class=\"selected-date\"></div>");
       $(this.nav).append(selectedDate);
