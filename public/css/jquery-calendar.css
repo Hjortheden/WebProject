@@ -34,4 +34,9 @@
 .calendar .calendar-nav .selected-date {
   font-size: 100px;
 }
+
+.more {
+  display: none;
+  float: bottom;
+}
 /*# sourceMappingURL=jquery-calendar.css.map */
