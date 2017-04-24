@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/jquery-calendar.css" />
     <link rel="stylesheet" href="/css/table.css" />
+    <link rel="stylesheet" href="/css/driverview.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/js/jquery-calendar.js"></script>
     <script src="jquery.js"></script>
+    <script src="/js/driverview.js"></script>
 
 
 
@@ -21,9 +23,11 @@
           <ul class="nav nav-pills pull-right">
 
             {{#if user}}
+                <li role="presentation"><a href="/users/%">Overview</a></li>
                 <li role="presentation"><a href="/">Calendar</a></li>
                 <li role="presentation"><a href="/users/register">Register</a></li>
                 <li role="presentation"><a href="/users/logout">Logout</a></li>
+
 
             {{else}}
                 <li role="presentation"><a href="/users/login">Login</a></li>

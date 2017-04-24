@@ -35,7 +35,7 @@
           results = [];
           for (i = 0, len = ref.length; i < len; i++) {
               day = ref[i];
-              results.push($(this.title).append("<div>" + day + "</div>"));
+              //results.push($(this.title).append("<div>" + day + "</div>"));
           }
           return results;
       };

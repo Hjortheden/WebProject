@@ -1,16 +1,16 @@
 .calendar.row {
-  margin: 0px;
+  margin: 40px;
 }
 .calendar {
   background-color: #608D84;
 }
 .calendar .calendar-body {
   background-color: #E4E4E4;
-  padding: 0;
+  padding: 10px;
   width: 65%;
 }
 .calendar .calendar-body .calendar-title {
-  height: 150px;
+  height: 25px;
 }
 .calendar .calendar-body .calendar-title div {
   position: relative;

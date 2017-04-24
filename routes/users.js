@@ -10,6 +10,11 @@ router.get('/register', function (req, res){
     res.render('register');
 });
 
+//driverview
+router.get('/%', function (req, res){
+    res.render('driverview');
+});
+
 //login
 router.get('/login', function (req, res){
     res.render('login');
