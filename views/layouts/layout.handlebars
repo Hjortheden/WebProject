@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login app</title>
+    <title>App</title>
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/jquery-calendar.css" />
+    <link rel="stylesheet" href="/css/table.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/js/jquery-calendar.js"></script>
     <script src="jquery.js"></script>
+
 
 
 </head>
@@ -26,9 +28,10 @@
             {{else}}
                 <li role="presentation"><a href="/users/login">Login</a></li>
             {{/if}}
+
           </ul>
         </nav>
-        <h3 class="text-muted">Login app</h3>
+        <h3 class="text-muted">App</h3>
       </div>
 
 
@@ -54,7 +57,7 @@
 
 
       <footer class="footer">
-        <p>&copy; 2017 Login app, Inc.</p>
+        <p>&copy; 2017 App.</p>
       </footer>
 
     </div> <!-- /container -->
@@ -63,10 +66,6 @@ $(function() {
   $("#calendar").calendar();
 });
 </script>
-<script>
-    $(function(){
-        $("#details").load("detailed-view.handlebars");
-    });
-</script>
+
 </body>
 </html>
