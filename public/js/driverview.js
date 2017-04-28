@@ -1,30 +1,47 @@
 
-    $(document).ready(function(){
-        $(".add-row").click(function(){
+    $(document).ready(function() {
+        $(".add-row").click(function () {
             var way = $("#way").val();
             var time = $("#time").val();
             var recess = $("#recess").val();
             var cost = $("#cost").val();
             var ob = $("#ob").val();
             var markup = "<tr><td><input type='checkbox' name='record'></td><td>" + way + "</td><td>"
-                + time +"</td><td>" + recess + "</td><td>" + cost + "</td><td>" + ob +"</td></tr>";
+                + time + "</td><td>" + recess + "</td><td>" + cost + "</td><td>" + ob + "</td></tr>";
             $("table tbody").append(markup);
         });
 
 
-
         // Find and remove selected table rows
-        $(".delete-row").click(function(){
-            $("table tbody").find('input[name="record"]').each(function(){
-                if($(this).is(":checked")){
+        $(".delete-row").click(function () {
+            $("table tbody").find('input[name="record"]').each(function () {
+                if ($(this).is(":checked")) {
                     $(this).parents("tr").remove();
                 }
             });
         });
 
+        // Find and edit selected table rows
+        $(".edit-row").click(function () {
+            var currentTD = $(this).parents("tr").find("td");
+            $("table tbody").find('input[name="record"]').each(function () {
+                if (($(this).html() == 'Edit')&&($(this).is(":checked"))){
+                    $.each(currentTD, function () {
+                    $(this).prop('contenteditable', true)
+                })
+                } else {
+                    $.each(currentTD, function () {
+                        $(this).prop('contenteditable', false)
+                    });
+                }
+                $(this).html($(this).html() == 'Edit' ? 'Save' : 'Edit')
+            });
+        });
+    })
+/*
         $(".change-row").click(function () {
-            var currentTD = $(this).parents('tr').find('td');
-            if ($(this).html() == 'Edit') {
+            var currentTD = $(this).parents("tr").find("td");
+            if (($(this).html() == 'Change row') && ($(this).is(":checked"))){
                 $.each(currentTD, function () {
                     $(this).prop('contenteditable', true)
                 });
@@ -34,12 +51,12 @@
                 });
             }
 
-            $(this).html($(this).html() == 'Edit' ? 'Save' : 'Edit')
+            $(this).html($(this).html() == 'Change row' ? 'Save' : 'Change row')
 
 
     });
     });
-
+*/
 //do something similar to check input for drivers?!?! -->
 /*
     //register
