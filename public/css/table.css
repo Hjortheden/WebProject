@@ -12,7 +12,7 @@ table{
     font-family: arial, sans-serif;
 }
 table, th, td{
-    border: 1px solid #cdcdcd;
+    border: none;
     text-align: left;
     padding: 8px;
 }
@@ -20,8 +20,13 @@ table th, table td{
     padding: 10px;
     text-align: left;
 }
+table th, table td.header{
+    padding: 10px;
+    text-align: left;
+}
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #fafafa ;
+
 }
 

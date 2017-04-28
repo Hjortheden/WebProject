@@ -1,27 +1,37 @@
 
 <body>
 <form>
-    <input type="text" id="name" placeholder="Name">
-    <input type="text" id="email" placeholder="Email Address">
-    <input type="button" class="add-row" value="Add Row">
+    <input type="text" id="way" placeholder="Sträcka">
+    <input type="text" id="time" placeholder="Tid">
+    <input type="text" id="recess" placeholder="Rast">
+    <input type="text" id="cost" placeholder="Kostnad">
+    <input type="text" id="ob" placeholder="OB-tillägg">
+    <input type="button" class="add-row" value="Lägg till">
 </form>
 <table>
     <thead>
     <tr>
-        <th>Select</th>
-        <th>Name</th>
-        <th>Email</th>
+        <th>Välj</th>
+        <th>Sträcka</th>
+        <th>Tid</th>
+        <th>Rast</th>
+        <th>Kostnad</th>
+        <th>OB-tillägg</th>
     </tr>
     </thead>
     <tbody>
     <tr>
         <td><input type="checkbox" name="record"></td>
-        <td>Peter Parker</td>
-        <td>peterparker@mail.com</td>
+        <td contenteditable="false"></td>
+        <td contenteditable="false"></td>
+        <td contenteditable="false"></td>
+        <td contenteditable="false"></td>
+        <td contenteditable="false"></td>
     </tr>
     </tbody>
 </table>
 <button type="button" class="delete-row">Delete Row</button>
+<button type="button" class="change-row">Change Row</button>
 </body>
 
 <!--
