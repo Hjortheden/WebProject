@@ -20,6 +20,32 @@
                 }
             });
         });
+    })
+
+    $(function () { $("td").dblclick(function () {
+        var OriginalContent = $(this).text();
+        $(this).addClass("cellEditing");
+        $(this).html(""+ OriginalContent+ "" );
+        $(this).children().first().focus();
+
+        $(this).children().first().keypress(function (e) {
+            if (e.which == 13) {
+                var newContent = $(this).val(); $(this).parent().text(newContent);
+                $(this).parent().removeClass("cellEditing");
+            } });
+
+        $(this).children().first().blur(function(){
+            $(this).parent().text(OriginalContent);
+            $(this).parent().removeClass("cellEditing");
+        });
+    });
+    });
+
+
+
+
+        /*
+>>>>>>> Stashed changes
 
         // Find and edit selected table rows
         $(".edit-row").click(function () {
@@ -37,7 +63,10 @@
                 $(this).html($(this).html() == 'Edit' ? 'Save' : 'Edit')
             });
         });
+<<<<<<< Updated upstream
     })
+=======
+    })*/
 /*
         $(".change-row").click(function () {
             var currentTD = $(this).parents("tr").find("td");

@@ -61,6 +61,49 @@ router.post('/register', function (req, res){
         res.redirect('/users/login');
     }
 });
+/*
+router.post('/%', function (req, res){
+    var way = req.body.way;
+    var time = req.body.time;
+    var recess = req.body.recess;
+    var cost = req.body.cost;
+    var ob = req.body.ob;
+
+    //validation
+    req.checkBody('way', 'Name is required').notEmpty();
+    req.checkBody('time', 'Email is required').notEmpty();
+    req.checkBody('recess', 'Email is not valid').isEmail();
+    req.checkBody('cost', 'Username is required').notEmpty();
+    req.checkBody('ob', 'Password is required').notEmpty();
+
+    var errors = req.validationErrors();
+
+    if(errors){
+        res.render('register',{
+            errors: errors
+        });
+    }else {
+        var newTrip = new Trip({
+            way: way,
+            time: email,
+            recess: username,
+            cost: password,
+            ob: ob,
+        });
+
+        User.createTrip(newTrip, function(err, trip) {
+            if(err) throw err;
+            console.log(trip);
+        });
+
+        req.flash('success_msg', 'You are registered and can now log in');
+
+        res.redirect('/users/login');
+    }
+});
+
+*/
+
 
 passport.use(new LocalStrategy(
     function(username, password, done) {
