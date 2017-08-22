@@ -1,5 +1,6 @@
 
     $(document).ready(function() {
+
         $(".add-row").click(function () {
             var way = $("#way").val();
             var time = $("#time").val();
@@ -17,29 +18,35 @@
             $("table tbody").find('input[name="record"]').each(function () {
                 if ($(this).is(":checked")) {
                     $(this).parents("tr").remove();
-                }
+                    }
+                });
             });
         });
-    })
 
-    $(function () { $("td").dblclick(function () {
-        var OriginalContent = $(this).text();
-        $(this).addClass("cellEditing");
-        $(this).html(""+ OriginalContent+ "" );
-        $(this).children().first().focus();
+        $(".edit-row").click(function () {
+            $("table tbody").find('input[name="record"]').each(function () {
+                if ($(this).is(":checked")) {
+                    var way=document.getElementById("#way");
+                    var time=document.getElementById("#time");
+                    var recess=document.getElementById("#recess");
+                    var cost=document.getElementById("#cost");
+                    var ob=document.getElementById("#ob");
 
-        $(this).children().first().keypress(function (e) {
-            if (e.which == 13) {
-                var newContent = $(this).val(); $(this).parent().text(newContent);
-                $(this).parent().removeClass("cellEditing");
-            } });
+                    var way_data = way.innerHTML;
+                    var time_data = way.innerHTML;
+                    var recess_data = recess.innerHTML;
+                    var cost_data = cost.innerHTML;
+                    var ob_data = ob.innerHTML;
 
-        $(this).children().first().blur(function(){
-            $(this).parent().text(OriginalContent);
-            $(this).parent().removeClass("cellEditing");
+                    way.innerHTML="<input type='text' id='#way"+no+"' value='"+way_data+"'>";
+                    time.innerHTML="<input type='text' id='#time"+no+"' value='"+time_data+"'>";
+                    recess.innerHTML="<input type='text' id='#recess"+no+"' value='"+recess_data+"'>";
+                    cost.innerHTML="<input type='text' id='#cost"+no+"' value='"+cost_data+"'>";
+                    ob.innerHTML="<input type='text' id=#ob"+no+"' value='"+ob_data+"'>";
+                }
         });
-    });
-    });
+        });
+
 
 
 
